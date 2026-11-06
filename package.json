@@ -1,0 +1,7 @@
+{
+  "name": "talent",
+  "version": "2.0.0",
+  "private": true,
+  "description": "TALENT — Qui a vraiment le meilleur goût sur Internet ? Jeu de soirée TV + téléphones, en pair-à-pair.",
+  "scripts": { "dev": "node dev-server.js" }
+}

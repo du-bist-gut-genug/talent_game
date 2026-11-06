@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TALENT — À propos et confidentialité</title>
+<link rel="stylesheet" href="style.css">
+<style>
+  body { overflow-y: auto; }
+  main { max-width: 760px; margin: 0 auto; padding: 32px 16px 64px; line-height: 1.6; }
+  h1 { font-family: var(--display); font-size: clamp(28px, 6vw, 44px); line-height: 1.1; margin: 8px 0 24px; }
+  h2 { font-family: var(--display); font-size: 18px; color: var(--cyan); margin: 32px 0 8px; font-weight: 400; }
+  p, li { color: rgba(255, 255, 255, .85); }
+  ul { padding-left: 22px; }
+  a { color: var(--gold); }
+  .card { background: var(--panel); border: 2px solid var(--panel-b); border-radius: var(--radius); padding: 16px 20px; margin-top: 12px; }
+  .back { display: inline-block; margin-bottom: 8px; font-weight: 800; }
+  .todo { background: rgba(255, 201, 60, .15); border: 2px dashed var(--gold); border-radius: 12px; padding: 2px 8px; }
+</style>
+</head>
+<body>
+  <div class="stage-bg"><div class="sparkles"></div></div>
+  <main>
+    <a class="back" href="index.html">← Retour au jeu</a>
+    <h1>À propos &amp; confidentialité</h1>
+
+    <h2>LE JEU</h2>
+    <p>TALENT est un jeu de soirée gratuit et non commercial : chacun propose des vidéos publiques trouvées sur YouTube ou Instagram,
+      tout le monde les regarde sur la télé, réagit et vote depuis son téléphone.</p>
+    <div class="card">
+      TALENT est un projet indépendant. Il n'est ni affilié, ni sponsorisé, ni approuvé par une émission de télévision,
+      une chaîne, YouTube (Google) ou Instagram (Meta). Les noms et marques cités appartiennent à leurs propriétaires respectifs.
+    </div>
+
+    <h2>LES VIDÉOS</h2>
+    <ul>
+      <li>TALENT n'héberge, ne télécharge et ne copie aucune vidéo. Les vidéos sont affichées uniquement avec les
+        <strong>lecteurs intégrés officiels</strong> de YouTube et d'Instagram, qui restent soumis à leurs propres conditions d'utilisation.</li>
+      <li>Les vidéos appartiennent à leurs auteurs. Si une vidéo a été supprimée ou que son auteur a désactivé l'intégration, elle ne s'affiche pas.</li>
+      <li>Chaque joueur est responsable des liens qu'il partage. Merci de respecter les règles des plateformes (âge minimum, contenus interdits)
+        et de ne pas proposer de contenus choquants, haineux ou illégaux.</li>
+    </ul>
+
+    <h2>VOS DONNÉES</h2>
+    <ul>
+      <li><strong>Aucun compte, aucune inscription, aucune publicité, aucun outil de mesure d'audience.</strong></li>
+      <li>Le pseudo, l'avatar et les scores existent uniquement pendant la partie, dans la mémoire de la page ouverte sur la télé.
+        Il n'y a pas de base de données : rien n'est conservé sur un serveur.</li>
+      <li>Votre téléphone garde en local (stockage du navigateur) votre pseudo, votre avatar et le code de la dernière partie,
+        pour vous éviter de tout ressaisir. Vous pouvez les effacer à tout moment en vidant les données du site dans votre navigateur.</li>
+      <li>La télé garde l'état de la partie en cours dans le stockage de session du navigateur, pour pouvoir reprendre si la page est rechargée.
+        Il est effacé à la fermeture de l'onglet.</li>
+    </ul>
+
+    <h2>SERVICES TECHNIQUES UTILISÉS</h2>
+    <p>Pour fonctionner, la page fait appel aux services suivants, qui reçoivent nécessairement votre adresse IP :</p>
+    <ul>
+      <li><strong>GitHub Pages</strong> (GitHub, Inc.) : hébergement des fichiers du site.</li>
+      <li><strong>Service de mise en relation PeerJS</strong> (0.peerjs.com) : met la télé et les téléphones en contact.
+        Ensuite, les données du jeu (pseudos, liens, réactions, votes) circulent directement entre les appareils, chiffrées par WebRTC.
+        Si une connexion directe est impossible, elles transitent par un relais (TURN) de PeerJS.</li>
+      <li><strong>Serveur STUN de Google</strong> : permet aux appareils de trouver comment se joindre.</li>
+      <li><strong>YouTube</strong> (mode « confidentialité renforcée », youtube-nocookie.com) et <strong>Instagram</strong> :
+        uniquement au moment où une vidéo est affichée. Ces services appliquent leurs propres politiques de confidentialité.</li>
+    </ul>
+    <p>Les polices de caractères et toutes les bibliothèques sont hébergées avec le site : aucune requête vers Google Fonts ou un CDN.</p>
+
+    <h2>ÉDITEUR ET HÉBERGEUR</h2>
+    <ul>
+      <li>Éditeur : silentrimount — contact : <a id="contact" href="#">valentin [arobase] paulon [point] fr</a>
+        · Instagram : <a href="https://www.instagram.com/valentin.pauln/" target="_blank" rel="noopener">@valentin.pauln</a></li>
+      <li>Hébergeur : GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, États-Unis — pages.github.com</li>
+    </ul>
+    <p>Pour signaler un problème ou une vidéo, utilisez le contact ci-dessus.</p>
+
+    <h2>CRÉDITS</h2>
+    <ul>
+      <li>Polices <em>Bungee</em> (The Bungee Project Authors) et <em>Outfit</em> (The Outfit Project Authors) — SIL Open Font License 1.1.</li>
+      <li><em>PeerJS</em> (Michelle Bu, Eric Zhang et contributeurs) — licence MIT.</li>
+      <li><em>QRCode.js</em> (davidshimjs) — licence MIT.</li>
+      <li>Emojis : polices d'emojis de votre appareil.</li>
+    </ul>
+  </main>
+  <script>
+    // L'adresse est reconstituée dans le navigateur pour limiter sa collecte par les robots de spam
+    (function () {
+      var a = document.getElementById('contact');
+      var m = ['valentin', 'paulon.fr'].join('@');
+      a.textContent = m;
+      a.href = 'mailto:' + m;
+    })();
+  </script>
+</body>
+</html>
